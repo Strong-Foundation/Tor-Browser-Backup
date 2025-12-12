@@ -24,7 +24,7 @@ jobs:
 
       # Cache Go modules to speed up build time
       - name: Cache Go Modules
-        uses: actions/cache@v4  # Caches dependencies to avoid re-downloading them
+        uses: actions/cache@v5  # Caches dependencies to avoid re-downloading them
         with:
           path: ~/.cache/go-build  # Path for Go build artifacts
           key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}  # Cache key based on go.sum contents
